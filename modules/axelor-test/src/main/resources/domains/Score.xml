@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<domain-models
+  xmlns="http://axelor.com/xml/ns/domain-models"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/domain-models http://axelor.com/xml/ns/domain-models/domain-models_5.2.xsd">
+
+  <module name="test" package="com.axelor.test.db" />
+  <entity name="Score">
+    <many-to-one name="name" title="Karyakar Name" ref="com.axelor.test.db.Karyakar"></many-to-one>
+     <many-to-one name="year" title="year" ref="com.axelor.test.db.Year"></many-to-one>
+    <many-to-one name="month" title="Month" ref="com.axelor.test.db.Month"></many-to-one>
+    <integer name="marks" title="Score"></integer>
+   </entity>
+</domain-models>

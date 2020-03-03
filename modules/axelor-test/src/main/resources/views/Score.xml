@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axel or.com/xml/ns/object-views/object-views_5.2.xsd">
+
+  <grid name="score-grid" title="Score List" model="com.axelor.test.db.Score">
+     <field name="name"/>
+     <field name="year"/>
+       <field name="month"/>
+     <field name="marks"/>
+  </grid>
+
+  <form name="score-form" title="Score list"   model="com.axelor.test.db.Score">
+    <panel title="Overview">
+     <field name="name"/>
+     <field name="year"/>
+       <field name="month"/>
+     <field name="marks"/>
+    </panel>
+  </form>
+
+</object-views>

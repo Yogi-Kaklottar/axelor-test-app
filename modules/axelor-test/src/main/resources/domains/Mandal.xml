@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<domain-models
+  xmlns="http://axelor.com/xml/ns/domain-models"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/domain-models http://axelor.com/xml/ns/domain-models/domain-models_5.2.xsd">
+
+  <module name="test" package="com.axelor.test.db" />
+  <entity name="Mandal">
+    <string name="name"/>
+    <string name="area"/>
+    <string name="display" namecolumn="true" search="test,area">
+    <![CDATA[
+    if (name == null) {
+        return null;
+    }
+    if (area == null) {
+        return name;
+    }
+    return name +"["+ area + "]";
+    ]]></string>
+    <many-to-one name="mandal" ref="com.axelor.test.db.Karyakar"></many-to-one>
+  </entity>
+</domain-models>

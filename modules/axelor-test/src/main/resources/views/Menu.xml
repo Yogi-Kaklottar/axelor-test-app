@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.2.xsd">
+  <menuitem name="menu-test-root" order="-100" title="test" icon="fa-users" icon-background="blue" />
+
+  <menuitem name="menu-test-karykar" order="-100" title="karyakar" parent="menu-test-root" action="karyakar.all" tag-style="important"/>
+   <action-view name="karyakar.all" model="com.axelor.test.db.Karyakar" title="karyakar">
+    <view type="grid" name="karyakar-grid" />
+    <view type="form" name="karyakar-grid" />
+    <context name="json-enhance" expr="true" />
+  </action-view>
+
+  <menuitem name="menu-test-mandal" order="-100" title="Mandal" parent="menu-test-root" action="mandal.all" tag-style="important"/>
+   <action-view name="mandal.all" model="com.axelor.test.db.Mandal" title="Mandal">
+    <view type="grid" name="mandal-grid" />
+    <view type="form" name="mandal-form" />
+    <context name="json-enhance" expr="true" />
+  </action-view>
+  <menuitem name="menu-test-year" order="-100" title="year" parent="menu-test-root" action="year.all" tag-style="important"/>
+   <action-view name="year.all" model="com.axelor.test.db.Year" title="Year">
+    <view type="grid" name="year-grid" />
+    <view type="form" name="year-form" />
+    <context name="json-enhance" expr="true" />
+  </action-view>
+  <menuitem name="menu-test-month" order="-100" title="Month" parent="menu-test-root" action="month.all" tag-style="important"/>
+   <action-view name="month.all" model="com.axelor.test.db.Month" title="Month">
+    <view type="grid" name="month-grid" />
+    <view type="form" name="month-form" />
+    <context name="json-enhance" expr="true" />
+  </action-view>
+  <menuitem name="menu-test-score" order="-100" title="Score" parent="menu-test-root" action="score.all" tag-style="important"/>
+   <action-view name="score.all" model="com.axelor.test.db.Score" title="Score">
+    <view type="grid" name="score-grid" />
+    <view type="form" name="score-form" />
+    <context name="json-enhance" expr="true" />
+  </action-view>
+
+  </object-views>

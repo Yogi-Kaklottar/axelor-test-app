@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<domain-models
+  xmlns="http://axelor.com/xml/ns/domain-models"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/domain-models http://axelor.com/xml/ns/domain-models/domain-models_5.2.xsd">
+
+  <module name="test" package="com.axelor.test.db" />
+  <entity name="Karyakar">
+    <string name="name"/>
+    <integer name="type" selection="user.type.select"></integer>
+    <many-to-one name="leader" title="Leader" ref="com.axelor.test.db.Karyakar"></many-to-one>
+    <one-to-many name="mandalList" ref="com.axelor.test.db.Mandal" mappedBy="mandal"/>
+   </entity>
+</domain-models>
